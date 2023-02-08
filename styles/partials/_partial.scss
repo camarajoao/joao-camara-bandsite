@@ -70,6 +70,11 @@ p {
     }
 }
 
+a {
+    text-decoration: none;
+    color: $primary-white;
+}
+
 .bandsite-logo {
     background-color: $primary-black;
     max-width: 120px;

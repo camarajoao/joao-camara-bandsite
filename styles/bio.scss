@@ -17,7 +17,6 @@
 
     &__nav a {
         color: $secondary-mercury;
-        text-decoration: none;
     }
 
     &__list {
@@ -55,7 +54,7 @@
     background-image: url(../assets/images/hero-bio.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 40vh;
+    height: 30vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -97,7 +96,7 @@
 
     &__img {
         width: 100%;
-        height: 35vh;
+        height: 25vh;
         margin-bottom: 16px;
     }
 
@@ -152,8 +151,45 @@
 
     &__img {
         width: 100%;
-        height: 35vh;
+        height: 25vh;
         padding-bottom: 16px;
     }
 
+}
+
+// End of Gallery Section Styles
+.footer {
+    color: $primary-white;
+    background-color: $primary-black;
+    padding: 24px 16px 16px 16px;
+
+    .getintouch__h2 {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+
+    .social {
+        width: 105px;
+        padding: 16px 0 24px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__management p {
+        padding-bottom: 16px;
+    }
+
+    .p-bold {
+        font-weight: 600;
+    }
+
+    .bandsite {
+        margin-top: 48px;
+    }
+
+    .copyright__p {
+        font-size: 10px;
+        padding-top: 8px;
+    }
 }

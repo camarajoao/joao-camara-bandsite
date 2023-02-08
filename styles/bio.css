@@ -68,6 +68,11 @@ p {
   }
 }
 
+a {
+  text-decoration: none;
+  color: #FFF;
+}
+
 .bandsite-logo {
   background-color: #323232;
   max-width: 120px;
@@ -96,7 +101,6 @@ p {
 }
 .header__nav a {
   color: #E1E1E1;
-  text-decoration: none;
 }
 .header__list {
   display: flex;
@@ -126,7 +130,7 @@ p {
   background-image: url(../assets/images/hero-bio.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 40vh;
+  height: 30vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -161,7 +165,7 @@ p {
 }
 .about__img {
   width: 100%;
-  height: 35vh;
+  height: 25vh;
   margin-bottom: 16px;
 }
 .about__quote {
@@ -204,6 +208,35 @@ p {
 }
 .gallery__img {
   width: 100%;
-  height: 35vh;
+  height: 25vh;
   padding-bottom: 16px;
+}
+
+.footer {
+  color: #FFF;
+  background-color: #323232;
+  padding: 24px 16px 16px 16px;
+}
+.footer .getintouch__h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.footer .social {
+  width: 105px;
+  padding: 16px 0 24px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__management p {
+  padding-bottom: 16px;
+}
+.footer .p-bold {
+  font-weight: 600;
+}
+.footer .bandsite {
+  margin-top: 48px;
+}
+.footer .copyright__p {
+  font-size: 10px;
+  padding-top: 8px;
 }/*# sourceMappingURL=bio.css.map */
