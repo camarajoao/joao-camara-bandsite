@@ -172,9 +172,18 @@ p {
 .about__quote--size {
   margin-bottom: 8px;
 }
-.about__band-name {
+.about__band--name {
   font-size: 14px;
   font-weight: 600;
   margin-top: 24px;
   margin-bottom: 16px;
+}
+.about__p--one {
+  font-size: 14px;
+  font-weight: 400;
+}
+.about__p--two {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 16px 0;
 }/*# sourceMappingURL=bio.css.map */

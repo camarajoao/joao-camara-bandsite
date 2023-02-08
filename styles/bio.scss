@@ -111,10 +111,23 @@
         }
     }
 
-    &__band-name {
+    &__band--name {
         font-size: 14px;
         font-weight: 600;
         margin-top: 24px;
         margin-bottom: 16px;
+    }
+
+    &__p--one {
+        // changed font-size to make it look as much as possible with the mobile mockup
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    &__p--two {
+        // changed font-size to make it look as much as possible with the mobile mockup
+        font-size: 14px;
+        font-weight: 400;
+        margin: 16px 0;
     }
 }
