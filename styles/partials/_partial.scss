@@ -1,0 +1,86 @@
+@use './typography' as *;
+
+@mixin tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1280px) {
+        @content;
+    }
+}
+
+$primary-black: #323232;
+$primary-silver: #AFAFAF;
+$primary-white: #FFF;
+$secondary-dark-black: #000000;
+$secondary-mercury: #E1E1E1;
+$secondary-alabaster: #FAFAFA;
+
+$avenir: 'AvenirNextLTPro';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $avenir;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+
+    @include tablet {
+        font-size: 60px;
+        line-height: 68px;
+        font-weight: 700;
+    }
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+
+    @include tablet {
+        font-size: 36px;
+        line-height: 44px;
+        font-weight: 700;
+    }
+}
+
+h3 {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+p {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+
+    @include tablet {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 400;
+    }
+}
+
+.bandsite-logo {
+    background-color: $primary-black;
+    max-width: 120px;
+    max-height: 20px;
+}
+
+.nav-list-decoration {
+    color: $primary-white;
+    text-decoration: underline;
+    text-decoration-color: $primary-white;
+    text-underline-offset: 20px;
+    text-decoration-thickness: 2px;
+
+}

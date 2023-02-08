@@ -1,1 +1,180 @@
-/*# sourceMappingURL=bio.css.map */
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url(../assets/fonts/AvenirNextLTPro-Regular.otf) format("otf"), url(../assets/fonts/alternative-files/AvenirNextLTPro.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url(../assets/fonts/AvenirNextLTPro-Demi.otf) format("otf"), url(../assets/fonts/alternative-files/AvenirNextLTProDemi.ttf) format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url(../assets/fonts/AvenirNextLTPro-Bold.otf) format("otf"), url(../assets/fonts/alternative-files/AvenirNextLTProBold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "AvenirNextLTPro";
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 700;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+  }
+}
+
+h3 {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  p {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+  }
+}
+
+.bandsite-logo {
+  background-color: #323232;
+  max-width: 120px;
+  max-height: 20px;
+}
+
+.nav-list-decoration {
+  color: #FFF;
+  text-decoration: underline;
+  text-decoration-color: #FFF;
+  text-underline-offset: 20px;
+  text-decoration-thickness: 2px;
+}
+
+.header {
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__logo {
+  margin: 16px;
+}
+.header__nav {
+  width: 100%;
+}
+.header__nav a {
+  color: #E1E1E1;
+  text-decoration: none;
+}
+.header__list {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.header__list--a {
+  list-style-type: none;
+  width: 50%;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 4px solid #323232;
+}
+.header__list--a:hover {
+  border-bottom: 4px solid #FFF;
+  color: #FFF;
+}
+.header__list--a:active > .header__list--item {
+  font-weight: 600;
+}
+.header__list--item {
+  list-style-type: none;
+  font-size: 14px;
+}
+
+.hero {
+  background-image: url(../assets/images/hero-bio.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 40vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.hero__opaque {
+  background-color: #323232;
+  height: 100%;
+  width: 100%;
+  opacity: 50%;
+  position: absolute;
+  z-index: 0;
+}
+.hero__name {
+  color: #FFF;
+  position: absolute;
+  z-index: 1;
+  margin: 16px;
+}
+.hero__name h1 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.about {
+  padding: 0 16px;
+}
+.about__h2 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 600;
+}
+.about__img {
+  width: 100%;
+  height: 35vh;
+  margin-bottom: 16px;
+}
+.about__quote {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.about__quote--size {
+  margin-bottom: 8px;
+}
+.about__band-name {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}/*# sourceMappingURL=bio.css.map */
