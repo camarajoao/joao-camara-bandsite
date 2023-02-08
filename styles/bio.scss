@@ -15,35 +15,28 @@
         width: 100%;
     }
 
-    &__nav a {
-        color: $secondary-mercury;
-    }
-
     &__list {
         display: flex;
         flex-direction: row;
         box-sizing: border-box;
+    }
 
-        &--a {
-            list-style-type: none;
-            width: 50%;
-            text-align: center;
-            padding-bottom: 10px;
-            border-bottom: 4px solid $primary-black;
+    &__link {
+        font-size: 14px;
+        color: $secondary-mercury;
+        list-style-type: none;
+        width: 50%;
+        text-align: center;
+        padding-bottom: 10px;
+        border-bottom: 4px solid $primary-black;
 
-            &:hover {
-                border-bottom: 4px solid $primary-white;
-                color: $primary-white;
-            }
-
-            &:active>.header__list--item {
-                font-weight: 600;
-            }
+        &:hover {
+            border-bottom: 4px solid $primary-white;
+            color: $primary-white;
         }
 
-        &--item {
-            list-style-type: none;
-            font-size: 14px;
+        &:active>.header__list--item {
+            font-weight: 600;
         }
     }
 }
@@ -73,12 +66,11 @@
         position: absolute;
         z-index: 1;
         margin: 16px;
+    }
 
-        & h1 {
-            // changed font-size and font-weight to make it look as much as possible with the mobile mockup
-            font-size: 26px;
-            font-weight: 600;
-        }
+    &__title {
+        font-size: 26px;
+        font-weight: 600;
     }
 }
 
@@ -87,7 +79,7 @@
 .about {
     padding: 0 16px;
 
-    &__h2 {
+    &__title {
         margin-top: 24px;
         margin-bottom: 16px;
         font-size: 24px;
@@ -110,23 +102,20 @@
         }
     }
 
-    &__band--name {
+    &__band-name {
         font-size: 14px;
         font-weight: 600;
         margin-top: 24px;
         margin-bottom: 16px;
     }
 
-    &__p--one {
+    &__paragraph {
         // changed font-size to make it look as much as possible with the mobile mockup
         font-size: 14px;
         font-weight: 400;
     }
 
-    &__p--two {
-        // changed font-size to make it look as much as possible with the mobile mockup
-        font-size: 14px;
-        font-weight: 400;
+    &__paragraph--padding {
         padding: 16px 0;
     }
 }
@@ -138,7 +127,7 @@
     background-color: $secondary-alabaster;
     padding-top: 24px;
 
-    &__h2 {
+    &__title {
         font-size: 24px;
         font-weight: 600;
     }
@@ -163,7 +152,7 @@
     background-color: $primary-black;
     padding: 24px 16px 16px 16px;
 
-    .getintouch__h2 {
+    .getintouch__title {
         font-size: 24px;
         font-weight: 600;
     }
@@ -180,7 +169,7 @@
         padding-bottom: 16px;
     }
 
-    .p-bold {
+    .paragraph--bold {
         font-weight: 600;
     }
 
@@ -188,7 +177,7 @@
         margin-top: 48px;
     }
 
-    .copyright__p {
+    .copyright__line {
         font-size: 10px;
         padding-top: 8px;
     }

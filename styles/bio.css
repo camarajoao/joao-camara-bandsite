@@ -99,31 +99,26 @@ a {
 .header__nav {
   width: 100%;
 }
-.header__nav a {
-  color: #E1E1E1;
-}
 .header__list {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
 }
-.header__list--a {
+.header__link {
+  font-size: 14px;
+  color: #E1E1E1;
   list-style-type: none;
   width: 50%;
   text-align: center;
   padding-bottom: 10px;
   border-bottom: 4px solid #323232;
 }
-.header__list--a:hover {
+.header__link:hover {
   border-bottom: 4px solid #FFF;
   color: #FFF;
 }
-.header__list--a:active > .header__list--item {
+.header__link:active > .header__list--item {
   font-weight: 600;
-}
-.header__list--item {
-  list-style-type: none;
-  font-size: 14px;
 }
 
 .hero {
@@ -149,7 +144,7 @@ a {
   z-index: 1;
   margin: 16px;
 }
-.hero__name h1 {
+.hero__title {
   font-size: 26px;
   font-weight: 600;
 }
@@ -157,7 +152,7 @@ a {
 .about {
   padding: 0 16px;
 }
-.about__h2 {
+.about__title {
   margin-top: 24px;
   margin-bottom: 16px;
   font-size: 24px;
@@ -176,19 +171,17 @@ a {
 .about__quote--size {
   margin-bottom: 8px;
 }
-.about__band--name {
+.about__band-name {
   font-size: 14px;
   font-weight: 600;
   margin-top: 24px;
   margin-bottom: 16px;
 }
-.about__p--one {
+.about__paragraph {
   font-size: 14px;
   font-weight: 400;
 }
-.about__p--two {
-  font-size: 14px;
-  font-weight: 400;
+.about__paragraph--padding {
   padding: 16px 0;
 }
 
@@ -197,7 +190,7 @@ a {
   background-color: #FAFAFA;
   padding-top: 24px;
 }
-.gallery__h2 {
+.gallery__title {
   font-size: 24px;
   font-weight: 600;
 }
@@ -217,7 +210,7 @@ a {
   background-color: #323232;
   padding: 24px 16px 16px 16px;
 }
-.footer .getintouch__h2 {
+.footer .getintouch__title {
   font-size: 24px;
   font-weight: 600;
 }
@@ -230,13 +223,13 @@ a {
 .footer__management p {
   padding-bottom: 16px;
 }
-.footer .p-bold {
+.footer .paragraph--bold {
   font-weight: 600;
 }
 .footer .bandsite {
   margin-top: 48px;
 }
-.footer .copyright__p {
+.footer .copyright__line {
   font-size: 10px;
   padding-top: 8px;
 }/*# sourceMappingURL=bio.css.map */
