@@ -79,6 +79,11 @@
     display: flex;
     align-items: center;
 
+    @include tablet {
+        height: 60vh;
+        background-position-y: -10vh;
+    }
+
     &__opaque {
         background-color: $primary-black;
         height: 100%;
@@ -93,67 +98,155 @@
         position: absolute;
         z-index: 1;
         margin: 16px;
+
+        @include tablet {
+            margin: 36px;
+        }
     }
 
     &__title {
         // changed font-size to make it look as much as possible with the mobile mockup
         font-size: 26px;
+
+        @include tablet {
+            font-size: 60px;
+        }
     }
 }
 
 // End of Hero Section Styles
 // About Section Styles
 .about {
+    display: flex;
+    flex-direction: column;
     padding: 0 16px;
+
+    @include tablet {
+        padding: 0 36px;
+    }
 
     &__title {
         margin-top: 24px;
         margin-bottom: 16px;
+
+        @include tablet {
+            margin-top: 48px;
+            margin-bottom: 36px;
+        }
+    }
+
+    &__content {
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            padding: 0 40px;
+        }
     }
 
     &__img {
         width: 100%;
         height: 25vh;
         margin-bottom: 16px;
+
+        @include tablet {
+            width: 100%;
+            height: 50vh;
+            align-self: center;
+            margin-bottom: 36px;
+        }
     }
 
-    &__quote--size {
-        margin-bottom: 8px;
+    &__quote {
+
+        &--margin {
+            margin-bottom: 8px;
+        }
+
+        @include tablet {
+            width: 100%;
+            align-self: center;
+        }
+
+        &--size {
+            @include tablet {
+                // changed font-weight to make it look as much as possible with the mobile mockup
+                font-size: 18px;
+            }
+        }
     }
 
     &__band-name {
         margin-top: 24px;
         margin-bottom: 16px;
+
+        @include tablet {
+            margin-top: 48px;
+            // kept margin-bottom at 16px to make it look as much as possible with the mobile mockup
+        }
+    }
+
+    &__paragraphs {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 36px;
+        }
     }
 
     &__paragraph {
         // changed font-size to make it look as much as possible with the mobile mockup
         font-size: 14px;
         font-weight: 400;
+
+        @include tablet {
+            width: 47%;
+        }
     }
 
     &__paragraph--padding {
         padding: 16px 0;
+
+        @include tablet {
+            padding: 0;
+        }
     }
 }
 
 // End of About Section Styles
 // Gallery Section Styles
 .gallery {
-    margin: 0 16px;
     background-color: $secondary-alabaster;
-    padding-top: 24px;
+    padding: 24px 16px 0 16px;
+
+    @include tablet {
+        padding: 48px 36px 8px 36px;
+    }
 
     &__photos {
         padding-top: 16px;
         display: flex;
         flex-direction: column;
+
+        @include tablet {
+            // changed padding top to make it look as much as possible with the mobile mockup
+            padding-top: 24px;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
     }
 
     &__img {
         width: 100%;
         height: 25vh;
         padding-bottom: 16px;
+
+        @include tablet {
+            height: 18vh;
+            width: 28vw;
+            padding-bottom: 24px;
+        }
     }
 
 }
@@ -163,6 +256,10 @@
     color: $primary-white;
     background-color: $primary-black;
     padding: 24px 16px 16px 16px;
+
+    @include tablet {
+        padding: 48px 36px 36px 36px;
+    }
 
     .social {
         width: 105px;
