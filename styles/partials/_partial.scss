@@ -1,5 +1,11 @@
 @use './typography' as *;
 
+@mixin mobile {
+    @media (min-width: 320px) {
+        @content;
+    }
+}
+
 @mixin tablet {
     @media (min-width: 768px) {
         @content;
@@ -29,9 +35,11 @@ $avenir: 'AvenirNextLTPro';
 }
 
 h1 {
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: 700;
+    @include mobile {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 600;
+    }
 
     @include tablet {
         font-size: 60px;
@@ -41,9 +49,11 @@ h1 {
 }
 
 h2 {
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: 700;
+    @include mobile {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 600;
+    }
 
     @include tablet {
         font-size: 36px;
@@ -53,9 +63,12 @@ h2 {
 }
 
 h3 {
+    @include mobile {
     font-size: 14px;
     line-height: 22px;
-    font-weight: 400;
+    // changed font-weight to make it look as much as possible with the mobile mockup
+    font-weight: 600;
+    }
 }
 
 p {

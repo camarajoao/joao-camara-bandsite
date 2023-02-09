@@ -23,10 +23,12 @@
   font-weight: 400;
 }
 
-h1 {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 700;
+@media (min-width: 320px) {
+  h1 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+  }
 }
 @media (min-width: 768px) {
   h1 {
@@ -36,10 +38,12 @@ h1 {
   }
 }
 
-h2 {
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: 700;
+@media (min-width: 320px) {
+  h2 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+  }
 }
 @media (min-width: 768px) {
   h2 {
@@ -49,10 +53,12 @@ h2 {
   }
 }
 
-h3 {
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: 400;
+@media (min-width: 320px) {
+  h3 {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+  }
 }
 
 p {
@@ -117,7 +123,7 @@ a {
   border-bottom: 4px solid #FFF;
   color: #FFF;
 }
-.header__link:active > .header__list--item {
+.header__link:active > .header__link--active {
   font-weight: 600;
 }
 
@@ -146,7 +152,6 @@ a {
 }
 .hero__title {
   font-size: 26px;
-  font-weight: 600;
 }
 
 .about {
@@ -155,25 +160,16 @@ a {
 .about__title {
   margin-top: 24px;
   margin-bottom: 16px;
-  font-size: 24px;
-  font-weight: 600;
 }
 .about__img {
   width: 100%;
   height: 25vh;
   margin-bottom: 16px;
 }
-.about__quote {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 24px;
-}
 .about__quote--size {
   margin-bottom: 8px;
 }
 .about__band-name {
-  font-size: 14px;
-  font-weight: 600;
   margin-top: 24px;
   margin-bottom: 16px;
 }
@@ -190,10 +186,6 @@ a {
   background-color: #FAFAFA;
   padding-top: 24px;
 }
-.gallery__title {
-  font-size: 24px;
-  font-weight: 600;
-}
 .gallery__photos {
   padding-top: 16px;
   display: flex;
@@ -209,10 +201,6 @@ a {
   color: #FFF;
   background-color: #323232;
   padding: 24px 16px 16px 16px;
-}
-.footer .getintouch__title {
-  font-size: 24px;
-  font-weight: 600;
 }
 .footer .social {
   width: 105px;
