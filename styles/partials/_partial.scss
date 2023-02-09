@@ -64,10 +64,10 @@ h2 {
 
 h3 {
     @include mobile {
-    font-size: 14px;
-    line-height: 22px;
-    // changed font-weight to make it look as much as possible with the mobile mockup
-    font-weight: 600;
+        font-size: 14px;
+        line-height: 22px;
+        // changed font-weight to make it look as much as possible with the mobile mockup
+        font-weight: 600;
     }
 }
 
@@ -92,13 +92,4 @@ a {
     background-color: $primary-black;
     max-width: 120px;
     max-height: 20px;
-}
-
-.nav-list-decoration {
-    color: $primary-white;
-    text-decoration: underline;
-    text-decoration-color: $primary-white;
-    text-underline-offset: 20px;
-    text-decoration-thickness: 2px;
-
 }
