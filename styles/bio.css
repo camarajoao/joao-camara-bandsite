@@ -332,16 +332,44 @@ a {
 @media (min-width: 768px) {
   .footer {
     padding: 48px 36px 36px 36px;
+    position: relative;
+  }
+}
+@media (min-width: 768px) {
+  .footer__contact {
+    display: flex;
+    flex-direction: row;
+    width: 53%;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 .footer .social {
-  width: 105px;
+  width: 120px;
   padding: 16px 0 24px 0;
   display: flex;
   justify-content: space-between;
 }
+.footer__management {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .footer__management {
+    padding: 36px 0 0 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .footer__management p {
   padding-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .footer__management p {
+    padding-bottom: 24px;
+  }
 }
 .footer .paragraph--bold {
   font-weight: 600;
@@ -349,7 +377,20 @@ a {
 .footer .bandsite {
   margin-top: 48px;
 }
+@media (min-width: 768px) {
+  .footer .bandsite {
+    position: absolute;
+    left: 80%;
+    bottom: 80%;
+  }
+}
 .footer .copyright__line {
   font-size: 10px;
   padding-top: 8px;
+}
+@media (min-width: 768px) {
+  .footer .copyright__line {
+    font-size: 13px;
+    padding-top: 24px;
+  }
 }/*# sourceMappingURL=bio.css.map */

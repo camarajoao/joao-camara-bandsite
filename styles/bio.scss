@@ -259,17 +259,46 @@
 
     @include tablet {
         padding: 48px 36px 36px 36px;
+        position: relative;
+    }
+
+    &__contact {
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            width: 53%;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 
     .social {
-        width: 105px;
+        width: 120px;
         padding: 16px 0 24px 0;
         display: flex;
         justify-content: space-between;
     }
 
+    &__management {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            padding: 36px 0 0 0;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+    }
+
     &__management p {
         padding-bottom: 16px;
+
+        @include tablet {
+            padding-bottom: 24px;
+        }
     }
 
     .paragraph--bold {
@@ -278,10 +307,21 @@
 
     .bandsite {
         margin-top: 48px;
+
+        @include tablet {
+            position: absolute;
+            left: 80%;
+            bottom: 80%;
+        }
     }
 
     .copyright__line {
         font-size: 10px;
         padding-top: 8px;
+
+        @include tablet {
+            font-size: 13px;
+            padding-top: 24px;
+        }
     }
 }
