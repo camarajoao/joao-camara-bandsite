@@ -71,17 +71,22 @@
 // End of Header Styles
 // Hero Section Styles
 .hero {
-    background-image: url(../assets/images/hero-bio.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 30vh;
+    height: 12rem;
     position: relative;
     display: flex;
     align-items: center;
 
+    @include mobile-landscape {
+        height: 20rem;
+    }
+
     @include tablet {
-        height: 60vh;
-        background-position-y: -10vh;
+        height: 30rem;
+    }
+
+    &__img {
+        height: 100%;
+        width: 100%;
     }
 
     &__opaque {
@@ -99,6 +104,7 @@
         z-index: 1;
         margin: 16px;
 
+
         @include tablet {
             margin: 36px;
         }
@@ -107,6 +113,10 @@
     &__title {
         // changed font-size to make it look as much as possible with the mobile mockup
         font-size: 26px;
+
+        @include mobile-landscape {
+            font-size: 48px;
+        }
 
         @include tablet {
             font-size: 60px;
@@ -137,6 +147,11 @@
 
     &__content {
 
+        @include mobile-landscape {
+            display: flex;
+            flex-direction: column;
+        }
+
         @include tablet {
             display: flex;
             flex-direction: column;
@@ -146,12 +161,16 @@
 
     &__img {
         width: 100%;
-        height: 25vh;
         margin-bottom: 16px;
+
+        @include mobile-landscape {
+            width: 75%;
+            align-self: center;
+        }
 
         @include tablet {
             width: 100%;
-            height: 50vh;
+            height: 22rem;
             align-self: center;
             margin-bottom: 36px;
         }
@@ -228,6 +247,12 @@
         display: flex;
         flex-direction: column;
 
+        @include mobile-landscape {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
         @include tablet {
             // changed padding top to make it look as much as possible with the mobile mockup
             padding-top: 24px;
@@ -239,12 +264,17 @@
 
     &__img {
         width: 100%;
-        height: 25vh;
+        height: 12rem;
         padding-bottom: 16px;
 
+        @include mobile-landscape {
+            width: 48%;
+            padding-bottom: 24px;
+        }
+
         @include tablet {
-            height: 18vh;
-            width: 28vw;
+            height: 20%;
+            width: 31%;
             padding-bottom: 24px;
         }
     }
@@ -257,12 +287,24 @@
     background-color: $primary-black;
     padding: 24px 16px 16px 16px;
 
+    @include mobile-landscape {
+        position: relative;
+    }
+
     @include tablet {
         padding: 48px 36px 36px 36px;
         position: relative;
     }
 
     &__contact {
+        @include mobile-landscape {
+            display: flex;
+            flex-direction: row;
+            width: 45%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         @include tablet {
             display: flex;
             flex-direction: row;
@@ -282,6 +324,11 @@
     &__management {
         display: flex;
         flex-direction: column;
+
+        @include mobile-landscape {
+            flex-direction: row;
+            justify-content: space-between;
+        }
 
         @include tablet {
             padding: 36px 0 0 0;
@@ -307,6 +354,12 @@
 
     .bandsite {
         margin-top: 48px;
+
+        @include mobile-landscape {
+            position: absolute;
+            left: 80%;
+            bottom: 80%;
+        }
 
         @include tablet {
             position: absolute;

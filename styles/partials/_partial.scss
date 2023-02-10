@@ -6,9 +6,15 @@
     }
 }
 
+@mixin mobile-landscape {
+    @media (min-width: 667px) {
+        @content
+    }
+}
+
 @mixin tablet {
     @media (min-width: 768px) {
-        @content;
+        @content
     }
 }
 
