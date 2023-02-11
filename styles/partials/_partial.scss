@@ -6,12 +6,6 @@
     }
 }
 
-@mixin mobile-landscape {
-    @media (min-width: 667px) {
-        @content
-    }
-}
-
 @mixin tablet {
     @media (min-width: 768px) {
         @content
@@ -22,6 +16,16 @@
     @media (min-width: 1280px) {
         @content;
     }
+}
+
+@mixin flex-just($justify) {
+    display: flex;
+    justify-content: $justify;
+}
+
+@mixin flex-dir($direction) {
+    display: flex;
+    flex-direction: $direction;
 }
 
 $primary-black: #323232;
@@ -37,7 +41,6 @@ $avenir: 'AvenirNextLTPro';
     margin: 0;
     padding: 0;
     font-family: $avenir;
-    font-weight: 400;
 }
 
 h1 {
