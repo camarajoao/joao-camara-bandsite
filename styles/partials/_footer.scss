@@ -1,0 +1,87 @@
+// Footer Section Styles
+.footer {
+    color: $primary-white;
+    background-color: $primary-black;
+    padding: 24px 16px 16px 16px;
+
+    @include tablet {
+        padding: 48px 36px 36px 36px;
+        position: relative;
+    }
+
+    @include desktop {
+        padding: 48px 96px 36px 96px;
+    }
+
+    &__contact {
+
+        @include tablet {
+            @include flex-just(space-between);
+            width: 53%;
+            align-items: center;
+        }
+
+        @include desktop {
+            width: 35%;
+        }
+
+        .social {
+            width: 120px;
+            padding: 16px 0 24px 0;
+            @include flex-just(space-between);
+        }
+    }
+
+    &__management {
+        @include flex-dir(column);
+
+        @include tablet {
+            padding: 36px 0 0 0;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @include desktop {
+            width: 66%;
+        }
+
+        .management__line,
+        .agent__line,
+        .entertainment__line {
+            padding-bottom: 16px;
+
+            @include tablet {
+                padding-bottom: 24px;
+            }
+        }
+
+        .management__line--bold,
+        .agent__line--bold,
+        .entertainment__line--bold {
+            font-weight: 600;
+        }
+    }
+
+    &__logo {
+        margin-top: 48px;
+
+        @include tablet {
+            position: absolute;
+            left: 80%;
+            bottom: 80%;
+        }
+    }
+
+    &__copyright--font {
+        font-size: 10px;
+        padding-top: 8px;
+
+        @include tablet {
+            font-size: 13px;
+            padding-top: 24px;
+        }
+    }
+}
+
+// End of Footer Section Styles

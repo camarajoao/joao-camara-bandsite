@@ -1,0 +1,71 @@
+// Header Styles
+.header {
+    background-color: $primary-black;
+    @include flex-dir(column);
+    align-items: center;
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    &__logo {
+        margin: 16px;
+        height: 19px;
+
+        @include tablet {
+            margin: 24px 32px;
+        }
+
+        @include desktop {
+            margin-left: 96px;
+        }
+    }
+
+    &__nav {
+        width: 100%;
+    }
+
+    &__list {
+        @include flex-dir(row);
+        box-sizing: border-box;
+
+        @include tablet {
+            width: 200px;
+        }
+    }
+
+    &__link {
+        font-size: 14px;
+        color: $secondary-mercury;
+        list-style-type: none;
+        width: 50%;
+        text-align: center;
+        padding-bottom: 10px;
+        border-bottom: 4px solid $primary-black;
+
+        @include tablet {
+            padding: 24px 0;
+            border-bottom: none;
+        }
+
+        &:hover {
+            border-bottom: 4px solid $primary-white;
+            color: $primary-white;
+
+            @include tablet {
+                border-bottom: none;
+                text-decoration: underline;
+                text-decoration-color: $primary-white;
+                text-underline-offset: 28px;
+                text-decoration-thickness: 2px;
+            }
+        }
+
+        &:active>.header__link--active {
+            font-weight: 600;
+        }
+    }
+}
+
+// End of Header Styles
