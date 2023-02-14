@@ -1,76 +1,7 @@
 @use './partials/partial' as *;
+@use './partials/header' as *;
+@use './partials/footer' as *;
 
-// Header Styles
-.header {
-    background-color: $primary-black;
-    @include flex-dir(column);
-    align-items: center;
-
-    @include tablet {
-        flex-direction: row;
-        justify-content: flex-start;
-    }
-
-    &__logo {
-        margin: 16px;
-        height: 19px;
-
-        @include tablet {
-            margin: 24px 32px;
-        }
-
-        @include desktop {
-            margin-left: 96px;
-        }
-    }
-
-    &__nav {
-        width: 100%;
-    }
-
-    &__list {
-        @include flex-dir(row);
-        box-sizing: border-box;
-
-        @include tablet {
-            width: 200px;
-        }
-    }
-
-    &__link {
-        font-size: 14px;
-        color: $secondary-mercury;
-        list-style-type: none;
-        width: 50%;
-        text-align: center;
-        padding-bottom: 10px;
-        border-bottom: 4px solid $primary-black;
-
-        @include tablet {
-            padding: 24px 0;
-            border-bottom: none;
-        }
-
-        &:hover {
-            border-bottom: 4px solid $primary-white;
-            color: $primary-white;
-
-            @include tablet {
-                border-bottom: none;
-                text-decoration: underline;
-                text-decoration-color: $primary-white;
-                text-underline-offset: 28px;
-                text-decoration-thickness: 2px;
-            }
-        }
-
-        &:active>.header__link--active {
-            font-weight: 600;
-        }
-    }
-}
-
-// End of Header Styles
 // Hero Section Styles
 .hero {
     position: relative;
@@ -117,6 +48,7 @@
 }
 
 // End of Hero Section Styles
+
 // About Section Styles
 .about {
     @include flex-dir(column);
@@ -258,90 +190,3 @@
 }
 
 // End of Gallery Section Styles
-// Footer Section Styles
-.footer {
-    color: $primary-white;
-    background-color: $primary-black;
-    padding: 24px 16px 16px 16px;
-
-    @include tablet {
-        padding: 48px 36px 36px 36px;
-        position: relative;
-    }
-
-    @include desktop {
-        padding: 48px 96px 36px 96px;
-    }
-
-    &__contact {
-
-        @include tablet {
-            @include flex-just(space-between);
-            width: 53%;
-            align-items: center;
-        }
-
-        @include desktop {
-            width: 35%;
-        }
-
-        .social {
-            width: 120px;
-            padding: 16px 0 24px 0;
-            @include flex-just(space-between);
-        }
-    }
-
-    &__management {
-        @include flex-dir(column);
-
-        @include tablet {
-            padding: 36px 0 0 0;
-            width: 100%;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        @include desktop {
-            width: 66%;
-        }
-
-        .management__line,
-        .agent__line,
-        .entertainment__line {
-            padding-bottom: 16px;
-
-            @include tablet {
-                padding-bottom: 24px;
-            }
-        }
-
-        .management__line--bold,
-        .agent__line--bold,
-        .entertainment__line--bold {
-            font-weight: 600;
-        }
-    }
-
-    &__logo {
-        margin-top: 48px;
-
-        @include tablet {
-            position: absolute;
-            left: 80%;
-            bottom: 80%;
-        }
-    }
-
-    &__copyright--font {
-        font-size: 10px;
-        padding-top: 8px;
-
-        @include tablet {
-            font-size: 13px;
-            padding-top: 24px;
-        }
-    }
-}
-
-// End of Footer Section Styles

@@ -1,3 +1,5 @@
+@use './partial' as *;
+
 // Header Styles
 .header {
     background-color: $primary-black;
