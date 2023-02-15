@@ -51,21 +51,15 @@
             border-bottom: none;
         }
 
+        &--active {
+            color: $primary-white;
+            font-weight: 600;
+            border-bottom: 4px solid $primary-white;
+        }
+
         &:hover {
             border-bottom: 4px solid $primary-white;
             color: $primary-white;
-
-            @include tablet {
-                border-bottom: none;
-                text-decoration: underline;
-                text-decoration-color: $primary-white;
-                text-underline-offset: 28px;
-                text-decoration-thickness: 2px;
-            }
-        }
-
-        &:active>.header__link--active {
-            font-weight: 600;
         }
     }
 }
