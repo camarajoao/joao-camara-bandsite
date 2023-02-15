@@ -145,21 +145,14 @@ a {
     border-bottom: none;
   }
 }
+.header__link--active {
+  color: #FFF;
+  font-weight: 600;
+  border-bottom: 4px solid #FFF;
+}
 .header__link:hover {
   border-bottom: 4px solid #FFF;
   color: #FFF;
-}
-@media (min-width: 768px) {
-  .header__link:hover {
-    border-bottom: none;
-    text-decoration: underline;
-    text-decoration-color: #FFF;
-    text-underline-offset: 28px;
-    text-decoration-thickness: 2px;
-  }
-}
-.header__link:active > .header__link--active {
-  font-weight: 600;
 }
 
 .footer {
