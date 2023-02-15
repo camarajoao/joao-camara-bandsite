@@ -2,6 +2,8 @@
 @use './partials/header' as *;
 @use './partials/footer' as *;
 
+
+// Hero-Shows Styles
 .hero-shows {
     position: relative;
     display: flex;
@@ -59,8 +61,56 @@
                 }
             }
         }
+    }
+}
 
+// End of Hero-Shows Styles
+
+// Schedule Section Styles
+.schedule {
+    padding: 16px;
+
+    &__heading {
+        margin: 16px 0 8px 0;
     }
 
+    &__concerts {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid $secondary-mercury;
+    }
 
+    &__key {
+        margin: 12px 0 4px 0;
+        color: $primary-silver;
+        font-size: 10px;
+    }
+
+    &__value {
+        color: $primary-black;
+
+        &--bold {
+            font-weight: 600;
+        }
+    }
+
+    &__buy-tickets {
+        margin: 16px 0;
+        padding: 12px 0;
+        font-weight: 600;
+        color: $primary-white;
+        background-color: $primary-black;
+        border: none;
+        border-radius: 4px;
+        height: 36px;
+
+    }
+}
+
+.schedule__concerts--hover {
+    background-color: $secondary-alabaster;
+}
+
+.schedule__concerts--active {
+    background-color: $secondary-mercury;
 }
