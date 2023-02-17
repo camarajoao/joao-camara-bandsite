@@ -419,4 +419,26 @@ a {
     width: 31.5%;
     padding-bottom: 24px;
   }
+}
+
+.conversation {
+  padding: 16px;
+}
+.conversation__container {
+  display: flex;
+}
+.conversation__icon {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.conversation__icon {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }/*# sourceMappingURL=bio.css.map */
