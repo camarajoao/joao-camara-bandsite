@@ -18,8 +18,9 @@ const comments = [
     }
 ];
 
-const conversationSection = document.querySelector('.conversation')
+const conversationSection = document.querySelector('.conversation');
 
+// Create a comment Section
 const formContainer = document.createElement('div');
 formContainer.classList.add('conversation__container');
 
@@ -36,12 +37,31 @@ formContainerRight.classList.add('conversation__right');
 const form = document.createElement('form');
 form.classList.add('conversation__form');
 
-const formName = document.createElement('p');
+const formName = document.createElement('label');
 formName.classList.add('form__name');
-formName.innerText: "NAME";
+formName.innerText = "NAME";
+formName.setAttribute('for', 'name')
 
 const formNameInput = document.createElement('input');
 formNameInput.classList.add('form__name-input');
+formNameInput.setAttribute('name', 'name');
+formNameInput.setAttribute('id', 'name');
+formNameInput.setAttribute('placeholder', 'Enter your name');
+
+const formComment = document.createElement('label');
+formComment.classList.add('form__comment');
+formComment.innerText = "COMMENT";
+formComment.setAttribute('for', 'comment')
+
+const formCommentInput = document.createElement('input');
+formCommentInput.classList.add('form__comment-input');
+formCommentInput.setAttribute('name', 'comment');
+formCommentInput.setAttribute('id', 'comment');
+formCommentInput.setAttribute('placeholder', 'Add a new comment');
+
+const formButton = document.createElement('button');
+formButton.classList.add('form__button');
+formButton.innerText = 'COMMENT';
 
 
 formContainerLeft.appendChild(formIcon);
@@ -49,7 +69,13 @@ formContainer.appendChild(formContainerLeft);
 
 form.appendChild(formName);
 form.appendChild(formNameInput);
+form.appendChild(formComment);
+form.appendChild(formCommentInput);
+form.appendChild(formButton);
 formContainerRight.appendChild(form);
 formContainer.appendChild(formContainerRight);
-
 conversationSection.appendChild(formContainer);
+
+// End of Create a comment Section
+
+const 
