@@ -430,15 +430,22 @@ a {
 .conversation__icon {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  height: 100%;
+  position: absolute;
+  left: -5px;
 }
-
-.conversation__icon {
-  -o-object-fit: cover;
-     object-fit: cover;
+.conversation__form {
+  display: flex;
+  flex-direction: column;
+}
+.conversation__left {
+  margin-right: 16px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.conversation__right {
+  flex-grow: 1;
 }/*# sourceMappingURL=bio.css.map */
