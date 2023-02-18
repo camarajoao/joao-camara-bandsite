@@ -58,7 +58,6 @@ formCommentInput.classList.add('form__comment-input');
 formCommentInput.setAttribute('name', 'comment');
 formCommentInput.setAttribute('id', 'comment');
 formCommentInput.setAttribute('placeholder', 'Add a new comment');
-// formCommentInput.addEventListener('focus', )
 
 const formButton = document.createElement('button');
 formButton.classList.add('form__button');
