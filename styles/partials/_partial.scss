@@ -119,8 +119,8 @@ a {
     border: 1px solid $secondary-mercury;
 
     &:focus::placeholder {
-            color: transparent;
-        }
+        color: transparent;
+    }
 
     &::placeholder {
         color: $primary-black;
