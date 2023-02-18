@@ -91,6 +91,31 @@ a {
   max-height: 20px;
 }
 
+.form-input-style {
+  min-height: 36px;
+  width: 100%;
+  border-radius: 4px;
+  padding: 12px;
+  box-sizing: border-box;
+  margin-top: 4px;
+  border: 1px solid #E1E1E1;
+}
+.form-input-style:focus::-moz-placeholder {
+  color: transparent;
+}
+.form-input-style:focus::placeholder {
+  color: transparent;
+}
+.form-input-style::-moz-placeholder {
+  color: #323232;
+}
+.form-input-style::placeholder {
+  color: #323232;
+}
+.form-input-style:active {
+  border: 1px solid #323232;
+}
+
 .header {
   background-color: #323232;
   display: flex;
@@ -325,13 +350,14 @@ a {
 }
 .schedule__buy-tickets {
   margin: 16px 0;
-  padding: 12px 0;
+  padding: 14px 0;
   font-weight: 600;
   color: #FFF;
   background-color: #323232;
   border: none;
   border-radius: 4px;
-  height: 36px;
+  height: 40px;
+  width: 100%;
 }
 
 .schedule__concerts--hover {
