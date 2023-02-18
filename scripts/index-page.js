@@ -53,11 +53,12 @@ formComment.classList.add('form__comment');
 formComment.innerText = "COMMENT";
 formComment.setAttribute('for', 'comment')
 
-const formCommentInput = document.createElement('input');
+const formCommentInput = document.createElement('textarea');
 formCommentInput.classList.add('form__comment-input');
 formCommentInput.setAttribute('name', 'comment');
 formCommentInput.setAttribute('id', 'comment');
 formCommentInput.setAttribute('placeholder', 'Add a new comment');
+// formCommentInput.addEventListener('focus', )
 
 const formButton = document.createElement('button');
 formButton.classList.add('form__button');
@@ -77,5 +78,44 @@ formContainer.appendChild(formContainerRight);
 conversationSection.appendChild(formContainer);
 
 // End of Create a comment Section
+// Posted comments Section
+for (let comment of comments) {
+    const postedCommentContainer = document.createElement('div');
+    postedCommentContainer.classList.add('conversation__posted-container');
 
-const 
+    const postedCommentContainerLeft = document.createElement('div');
+    postedCommentContainerLeft.classList.add('conversation__posted-container-left');
+
+    const postedCommentAvatar = document.createElement('img');
+    postedCommentAvatar.classList.add('conversation__posted-avatar');
+
+    const postedCommentContainerRight = document.createElement('div');
+    postedCommentContainerRight.classList.add('conversation__posted-container-right');
+
+    const postedCommentContainerRightTop = document.createElement('div');
+    postedCommentContainerRightTop.classList.add('conversation__posted-container-right-top');
+
+    const postedCommentName = document.createElement('p');
+    postedCommentName.classList.add('conversation__posted-name');
+    postedCommentName.innerText = `${comment.name}`;
+
+    const postedCommentDate = document.createElement('p');
+    postedCommentDate.classList.add('conversation__posted-date');
+    postedCommentDate.innerText = `${comment.timestamp}`;
+
+    const postedCommentContainerRightBottom = document.createElement('div');
+    postedCommentContainerRightBottom.classList.add('conversation__posted-container-right-bottom');
+
+    const postedCommentText = document.createElement('p');
+    postedCommentText.classList.add('conversation__posted-text');
+    postedCommentText.innerText = `${comment.comment}`;
+
+    postedCommentContainerRightBottom.appendChild(postedCommentText);
+    postedCommentContainerRightTop.append(postedCommentName, postedCommentDate);
+    postedCommentContainerRight.append(postedCommentContainerRightTop, postedCommentContainerRightBottom);
+    postedCommentContainerLeft.append(postedCommentAvatar);
+    postedCommentContainer.append(postedCommentContainerLeft, postedCommentContainerRight);
+    conversationSection.append(postedCommentContainer);
+}
+
+
