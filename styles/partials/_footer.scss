@@ -5,15 +5,15 @@
 .footer {
     color: $primary-white;
     background-color: $primary-black;
-    padding: 24px 16px 16px 16px;
+    padding: 2.4rem 1.6rem 1.6rem 1.6rem;
 
     @include tablet {
-        padding: 48px 36px 36px 36px;
+        padding: 4.8rem 3.6rem 3.6rem 3.6rem;
         position: relative;
     }
 
     @include desktop {
-        padding: 48px 96px 36px 96px;
+        padding: 4.8rem 9.6rem 3.6rem 9.6rem;
     }
 
     &__contact {
@@ -29,8 +29,8 @@
         }
 
         .social {
-            width: 120px;
-            padding: 16px 0 24px 0;
+            width: 12rem;
+            padding: 1.6rem 0 2.4rem 0;
             @include flex-just(space-between);
         }
     }
@@ -39,7 +39,7 @@
         @include flex-dir(column);
 
         @include tablet {
-            padding: 36px 0 0 0;
+            padding: 3.6rem 0 0 0;
             width: 100%;
             flex-direction: row;
             justify-content: space-between;
@@ -52,10 +52,10 @@
         .management__line,
         .agent__line,
         .entertainment__line {
-            padding-bottom: 16px;
+            padding-bottom: 1.6rem;
 
             @include tablet {
-                padding-bottom: 24px;
+                padding-bottom: 2.4rem;
             }
         }
 
@@ -64,10 +64,20 @@
         .entertainment__line--bold {
             font-weight: 600;
         }
+
+        .management__line--email,
+        .agent__line--email,
+        .entertainment__line--email {
+            font-size: 1.3rem;
+
+            @include tablet {
+                font-size: 1.4rem;
+            }
+        }
     }
 
     &__logo {
-        margin-top: 48px;
+        margin-top: 4.8rem;
 
         @include tablet {
             position: absolute;
@@ -77,12 +87,12 @@
     }
 
     &__copyright--font {
-        font-size: 10px;
-        padding-top: 8px;
+        font-size: 1rem;
+        padding-top: .8rem;
 
         @include tablet {
-            font-size: 13px;
-            padding-top: 24px;
+            font-size: 1.3rem;
+            padding-top: 2.4rem;
         }
     }
 }
