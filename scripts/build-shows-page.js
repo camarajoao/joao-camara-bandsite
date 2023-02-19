@@ -37,6 +37,24 @@ const shows = [
 ];
 
 const schedule = document.querySelector(".schedule");
+// create elements for schedule title
+const scheduleTitle = document.createElement('div');
+scheduleTitle.classList.add('schedule__title');
+
+const scheduleHeading = document.createElement('h2');
+scheduleHeading.classList.add('schedule__heading');
+scheduleHeading.innerText = "Shows";
+scheduleTitle.appendChild(scheduleHeading);
+
+schedule.appendChild(scheduleTitle);
+
+// create elements for schedule content
+const scheduleContent = document.createElement('div');
+scheduleContent.classList.add('schedule__content');
+
+const tableHeaderTable = document.createElement('div');
+tableHeaderTable.classList.add('schedule__header');
+scheduleContent.appendChild(tableHeaderTable);
 
 for (let show of shows) {
     const concert = document.createElement("div");
@@ -94,8 +112,33 @@ for (let show of shows) {
         event.stopPropagation();
     })
 
-    schedule.appendChild(concert);
+    scheduleContent.appendChild(concert);
 
 }
+
+schedule.appendChild(scheduleContent);
+
+// Elements for tablet and desktop versions - .schedule__key
+
+const keyDateTable = document.createElement("p");
+keyDateTable.classList.add('schedule__key--table');
+keyDateTable.innerText = 'DATE';
+tableHeaderTable.appendChild(keyDateTable);
+
+const keyVenueTable = document.createElement("p");
+keyVenueTable.classList.add('schedule__key--table');
+keyVenueTable.innerText = 'VENUE';
+tableHeaderTable.appendChild(keyVenueTable);
+
+const keyLocationTable = document.createElement("p");
+keyLocationTable.classList.add('schedule__key--table');
+keyLocationTable.innerText = 'LOCATION';
+tableHeaderTable.appendChild(keyLocationTable);
+
+const keyTicketTable = document.createElement('p');
+keyTicketTable.classList.add('schedule__key--table');
+keyTicketTable.innerText = 'TICKET';
+keyTicketTable.style.color = 'transparent';
+tableHeaderTable.appendChild(keyTicketTable);
 
 
