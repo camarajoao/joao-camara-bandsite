@@ -16,8 +16,7 @@
 
     &__opaque {
         background-color: $primary-black;
-        height: 100%;
-        width: 100%;
+        @include width-height(100%, 100%);
         opacity: 50%;
         position: absolute;
     }
@@ -25,24 +24,24 @@
     &__name {
         color: $primary-white;
         position: absolute;
-        margin: 16px;
+        margin: 1.6rem;
 
 
         @include tablet {
-            margin: 36px;
+            margin: 3.6rem;
         }
 
         @include desktop {
-            margin: 96px;
+            margin: 9.6rem;
         }
     }
 
     &__title {
         // changed font-size to make it look as much as possible with the mobile mockup
-        font-size: 26px;
+        font-size: 2.6rem;
 
         @include tablet {
-            font-size: 60px;
+            font-size: 6rem;
         }
     }
 }
@@ -52,78 +51,87 @@
 // About Section Styles
 .about {
     @include flex-dir(column);
-    padding: 0 16px;
+    padding: 0 1.6rem;
 
     @include tablet {
-        padding: 0 36px;
+        padding: 0 3.6rem;
     }
 
     @include desktop {
-        padding: 0 128px;
+        padding: 0 9.6rem;
     }
 
     &__title {
-        margin-top: 24px;
-        margin-bottom: 16px;
+        margin-top: 2.4rem;
+        margin-bottom: 1.6rem;
 
         @include tablet {
-            margin-top: 48px;
-            margin-bottom: 36px;
+            margin-top: 4.8rem;
+            margin-bottom: 3.6rem;
         }
     }
 
     &__content {
 
         @include tablet {
-            padding: 0 40px;
+            padding: 0 4rem;
         }
 
         @include desktop {
-            padding: 0 80px;
+            padding: 0 8rem;
         }
     }
 
     &__img {
         width: 100%;
-        margin-bottom: 16px;
+        margin-bottom: 1.6rem;
 
         @include tablet {
-            margin-bottom: 36px;
+            margin-bottom: 3.6rem;
         }
     }
 
     &__quote {
 
         &--margin {
-            margin-bottom: 8px;
+            margin-bottom: .8rem;
         }
 
         @include desktop {
             width: 83%;
         }
 
+        @include desktop {
+            font-size: 2.6rem;
+        }
+
         &--size {
             @include tablet {
                 // changed font-weight to make it look as much as possible with the mockup
-                font-size: 17px;
+                font-size: 1.7rem;
+            }
+
+            @include desktop {
+                // changed font-weight to make it look as much as possible with the mockup
+                font-size: 1.8rem;
             }
         }
     }
 
     &__band-name {
-        margin-top: 24px;
-        margin-bottom: 16px;
+        margin-top: 2.4rem;
+        margin-bottom: 1.6rem;
 
         @include tablet {
-            margin-top: 48px;
-            margin-bottom: 24px;
+            margin-top: 4.8rem;
+            margin-bottom: 2.4rem;
         }
     }
 
     &__paragraphs {
         @include tablet {
             @include flex-just(space-between);
-            padding-bottom: 36px;
+            padding-bottom: 3.6rem;
         }
     }
 
@@ -135,11 +143,12 @@
 
         @include desktop {
             width: 48%;
+            font-size: 1.5rem;
         }
     }
 
     &__paragraph--padding {
-        padding: 16px 0;
+        padding: 1.6rem 0;
 
         @include tablet {
             padding: 0;
@@ -151,39 +160,39 @@
 // Gallery Section Styles
 .gallery {
     background-color: $secondary-alabaster;
-    padding: 24px 16px 0 16px;
+    padding: 2.4rem 1.6rem 0 1.6rem;
 
     @include tablet {
-        padding: 48px 36px 8px 36px;
+        padding: 4.8rem 3.6rem .8rem 3.6rem;
     }
 
     @include desktop {
-        padding: 48px 96px 8px 96px;
+        padding: 4.8rem 9.6rem .8rem 9.6rem;
     }
 
     &__photos {
-        padding-top: 16px;
+        padding-top: 1.6rem;
         @include flex-dir(column);
 
         @include tablet {
             // changed padding top to make it look as much as possible with the mockup
-            padding-top: 24px;
+            padding-top: 2.4rem;
             flex-direction: row;
             justify-content: space-between;
             flex-wrap: wrap;
         }
 
         @include desktop {
-            padding-top: 36px;
+            padding-top: 3.6rem;
         }
     }
 
     &__img {
-        padding-bottom: 16px;
+        padding-bottom: 1.6rem;
 
         @include tablet {
             width: 31.5%;
-            padding-bottom: 24px;
+            padding-bottom: 2.4rem;
         }
     }
 
@@ -192,32 +201,48 @@
 // End of Gallery Section Styles
 // Conversation Section
 .conversation {
-    padding: 16px;
+    padding: 1.6rem;
+
+    @include tablet {
+        padding: 4.8rem 3.6rem 3.6rem 3.6rem;
+    }
+
+    @include desktop {
+        padding: 4.8rem 9.6rem 3.6rem 9.6rem;
+    }
 
     &__title {
-        margin-bottom: 16px;
+        margin-bottom: 1.6rem;
     }
 
     &__container {
+        @include tablet {
+            padding: 0 6rem;
+        }
+
+        @include desktop {
+            padding: 0 25.6rem;
+        }
+    }
+
+    &__post-comment {
         display: flex;
-        border-bottom: 1px solid $secondary-mercury;
+        border-bottom: .1rem solid $secondary-mercury;
     }
 
     &__icon {
         object-fit: cover;
         height: 100%;
         position: absolute;
-        left: -5px;
+        left: -.5rem;
     }
 
     &__form {
-        display: flex;
-        flex-direction: column;
+        @include flex-dir(column);
 
         .form__name {
             color: $primary-silver;
-            font-size: 12px;
-            font-weight: 600;
+            @include font-size-weight(1.2rem, 600);
 
             &-input {
                 @extend .form-input-style;
@@ -226,39 +251,51 @@
 
         .form__comment {
             color: $primary-silver;
-            font-size: 12px;
-            font-weight: 600;
-            margin-top: 24px;
+            @include font-size-weight(1.2rem, 600);
+            margin-top: 2.4rem;
 
             &-input {
                 @extend .form-input-style;
-                min-height: 100px;
+                min-height: 10rem;
                 resize: none;
             }
         }
 
         .form__button {
-            margin: 16px 0;
-            padding: 14px 0;
-            font-weight: 600;
+            @include font-size-weight(1.6rem, 600);
+            margin: 1.6rem 0;
+            padding: 1.4rem 0;
             color: $primary-white;
             background-color: $primary-black;
             border: none;
-            border-radius: 4px;
-            height: 40px;
-            width: 100%;
+            border-radius: .4rem;
+            @include width-height(100%, 4rem);
+            cursor: pointer;
+
+            &:hover {
+                background-color: $secondary-dark-black;
+            }
+
+            @include tablet {
+                padding: 1.4rem 3.2rem;
+                width: 15rem;
+                align-self: flex-end;
+            }
         }
 
     }
 
     &__left {
-        margin-right: 16px;
-        width: 36px;
-        height: 36px;
+        margin-right: 1.6rem;
+        @include width-height(3.6rem, 3.6rem);
         border-radius: 50%;
         overflow: hidden;
         position: relative;
-        margin-top: 20px;
+        margin-top: 2rem;
+
+        @include tablet {
+            @include width-height(4.8rem, 4.8rem);
+        }
 
     }
 
@@ -269,36 +306,49 @@
     &__posted-container {
         display: flex;
         position: relative;
-        border-bottom: 1px solid $secondary-mercury;
-        padding: 16px 0;
+        border-bottom: .1rem solid $secondary-mercury;
+        padding: 1.6rem 0;
     }
 
     &__posted-container-left {
-        margin-right: 16px;
-        width: 36px;
-        height: 36px;
+        margin-right: 1.6rem;
+        @include width-height(3.6rem, 3.6rem);
         border-radius: 50%;
-        background-color: $primary-silver;
-    }
+        background-color: $secondary-mercury;
 
-    &__posted-container-right {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-
-        &-top {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        &-bottom {
-            margin-top: 8px;
+        @include tablet {
+            @include width-height(4.8rem, 4.8rem);
         }
     }
 
     &__posted-avatar {
-        width: 50px;
+        @include width-height(3.6rem, 3.6rem);
+        border-radius: 50%;
+
+        @include tablet {
+            @include width-height(4.8rem, 4.8rem);
+        }
+
+    }
+
+    &__posted-container-right {
+        @include flex-dir(column);
+        width: 100%;
+
+        &-top {
+            @include flex-dir(row);
+            justify-content: space-between;
+        }
+
+        &-bottom {
+            margin-top: .8rem;
+        }
+    }
+
+    &__posted-text {
+        @include desktop {
+            font-size: 1.63rem;
+        }
     }
 
     &__posted-name {
