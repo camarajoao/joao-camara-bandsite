@@ -15,8 +15,8 @@
     }
 
     &__opaque {
-        background-color: $primary-black;
         @include width-height(100%, 100%);
+        background-color: $primary-black;
         opacity: 50%;
         position: absolute;
     }
@@ -50,7 +50,7 @@
 
 // About Section Styles
 .about {
-    @include flex-dir(column);
+    @include flex(null, column);
     padding: 0 1.6rem;
 
     @include tablet {
@@ -130,7 +130,7 @@
 
     &__paragraphs {
         @include tablet {
-            @include flex-just(space-between);
+            @include flex(space-between, null);
             padding-bottom: 3.6rem;
         }
     }
@@ -171,14 +171,13 @@
     }
 
     &__photos {
+        @include flex(null, column);
         padding-top: 1.6rem;
-        @include flex-dir(column);
 
         @include tablet {
+            @include flex(space-between, row);
             // changed padding top to make it look as much as possible with the mockup
             padding-top: 2.4rem;
-            flex-direction: row;
-            justify-content: space-between;
             flex-wrap: wrap;
         }
 
@@ -238,11 +237,11 @@
     }
 
     &__form {
-        @include flex-dir(column);
+        @include flex(null, column);
 
         .form__name {
-            color: $primary-silver;
             @include font-size-weight(1.2rem, 600);
+            color: $primary-silver;
 
             &-input {
                 @extend .form-input-style;
@@ -250,8 +249,8 @@
         }
 
         .form__comment {
-            color: $primary-silver;
             @include font-size-weight(1.2rem, 600);
+            color: $primary-silver;
             margin-top: 2.4rem;
 
             &-input {
@@ -263,13 +262,13 @@
 
         .form__button {
             @include font-size-weight(1.6rem, 600);
+            @include width-height(100%, 4rem);
             margin: 1.6rem 0;
             padding: 1.4rem 0;
             color: $primary-white;
             background-color: $primary-black;
             border: none;
             border-radius: .4rem;
-            @include width-height(100%, 4rem);
             cursor: pointer;
 
             &:hover {
@@ -286,8 +285,8 @@
     }
 
     &__left {
-        margin-right: 1.6rem;
         @include width-height(3.6rem, 3.6rem);
+        margin-right: 1.6rem;
         border-radius: 50%;
         overflow: hidden;
         position: relative;
@@ -311,8 +310,8 @@
     }
 
     &__posted-container-left {
-        margin-right: 1.6rem;
         @include width-height(3.6rem, 3.6rem);
+        margin-right: 1.6rem;
         border-radius: 50%;
         background-color: $secondary-mercury;
 
@@ -332,12 +331,11 @@
     }
 
     &__posted-container-right {
-        @include flex-dir(column);
+        @include flex(null, column);
         width: 100%;
 
         &-top {
-            @include flex-dir(row);
-            justify-content: space-between;
+            @include flex(space-between, row);
         }
 
         &-bottom {
