@@ -64,8 +64,8 @@ formCommentInput.setAttribute('placeholder', 'Add a new comment');
 
 const formButton = document.createElement('button');
 formButton.classList.add('form__button');
+formButton.setAttribute('type', 'submit');
 formButton.innerText = 'COMMENT';
-
 
 formContainerLeft.appendChild(formIcon);
 formContainer.appendChild(formContainerLeft);
@@ -81,7 +81,12 @@ conversationContainer.appendChild(formContainer);
 
 // End of Create a comment Section
 // Posted comments Section
-for (let comment of comments) {
+
+const postedSection = document.createElement('div');
+postedSection.classList.add('conversation__posted');
+conversationContainer.appendChild(postedSection)
+
+function displayComment(comment) {
     const postedCommentContainer = document.createElement('div');
     postedCommentContainer.classList.add('conversation__posted-container');
 
@@ -117,7 +122,44 @@ for (let comment of comments) {
     postedCommentContainerRight.append(postedCommentContainerRightTop, postedCommentContainerRightBottom);
     postedCommentContainerLeft.append(postedCommentAvatar);
     postedCommentContainer.append(postedCommentContainerLeft, postedCommentContainerRight);
-    conversationContainer.append(postedCommentContainer);
+    postedSection.append(postedCommentContainer);
 }
 
+for (let comment of comments) {
+    displayComment(comment);
+}
+
+
+formButton.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    if (formNameInput.value !== "" && formCommentInput.value !== "") {
+        const date = new Date();
+        const day = ("0" + date.getDate()).slice(-2);
+        const month = ("0" + (date.getMonth() + 1)).slice(-2);
+        const year = date.getFullYear();
+        timestamp = `${month}/${day}/${year}`
+        const newComment = { name: formNameInput.value, timestamp, comment: formCommentInput.value }
+        comments.unshift(newComment);
+        postedSection.innerHTML = "";
+        for (let comment of comments) {
+            displayComment(comment);
+        }
+        formNameInput.value = "";
+        formCommentInput.value = "";
+    } else {
+        if (formNameInput.value === "") {
+            formNameInput.classList.add('error-state');
+        }
+        if (formCommentInput.value === "") {
+            formCommentInput.classList.add('error-state');
+        }
+    }
+})
+formNameInput.addEventListener('focus', function () {
+    formNameInput.classList.remove('error-state');
+})
+formCommentInput.addEventListener('focus', function () {
+    formCommentInput.classList.remove('error-state');
+})
 
