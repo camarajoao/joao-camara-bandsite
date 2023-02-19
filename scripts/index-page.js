@@ -19,10 +19,13 @@ const comments = [
 ];
 
 const conversationSection = document.querySelector('.conversation');
+const conversationContainer = document.createElement('div');
+conversationContainer.classList.add('conversation__container');
+conversationSection.appendChild(conversationContainer);
 
 // Create a comment Section
 const formContainer = document.createElement('div');
-formContainer.classList.add('conversation__container');
+formContainer.classList.add('conversation__post-comment');
 
 const formContainerLeft = document.createElement('div');
 formContainerLeft.classList.add('conversation__left');
@@ -74,7 +77,7 @@ form.appendChild(formCommentInput);
 form.appendChild(formButton);
 formContainerRight.appendChild(form);
 formContainer.appendChild(formContainerRight);
-conversationSection.appendChild(formContainer);
+conversationContainer.appendChild(formContainer);
 
 // End of Create a comment Section
 // Posted comments Section
@@ -114,7 +117,7 @@ for (let comment of comments) {
     postedCommentContainerRight.append(postedCommentContainerRightTop, postedCommentContainerRightBottom);
     postedCommentContainerLeft.append(postedCommentAvatar);
     postedCommentContainer.append(postedCommentContainerLeft, postedCommentContainerRight);
-    conversationSection.append(postedCommentContainer);
+    conversationContainer.append(postedCommentContainer);
 }
 
 
