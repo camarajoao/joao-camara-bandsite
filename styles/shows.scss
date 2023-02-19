@@ -9,7 +9,16 @@
     display: flex;
     align-items: center;
     overflow: hidden;
-    max-height: 90vh;
+    max-height: 38vh;
+
+    @include tablet {
+        max-height: 64vh;
+    }
+
+    @include desktop {
+        max-height: 88vh;
+    }
+
 
     &__img {
         width: 100%;
@@ -17,47 +26,85 @@
 
     &__opaque {
         background-color: $primary-black;
-        height: 100%;
-        width: 100%;
+        @include width-height(100%, 100%);
         opacity: 50%;
         position: absolute;
     }
 
     &__content {
-        display: flex;
+        @include flex-dir(column);
+        justify-content: space-between;
         position: absolute;
-        flex-direction: column;
         box-sizing: border-box;
-        width: 100%;
-        height: 100%;
-        padding: 16px;
-        justify-content: space-evenly;
+        @include width-height(100%, 100%);
+        padding: 3.6rem 1.6rem;
+
+        @include tablet {
+            padding: 6.4rem 3.6rem;
+        }
+
+        @include desktop {
+            padding: 12rem;
+            flex-direction: row;
+            vertical-align: middle;
+        }
+
+        .content__song-name {
+            @include flex-dir(column);
+            justify-content: space-evenly;
+            padding-right: 8rem;
+            flex-grow: 1;
+
+            @include tablet {
+                padding-right: 9.6rem;
+            }
+
+            @include desktop {
+                @include flex-dir(column);
+                justify-content: center;
+                width: 35vw;
+            }
+        }
+
+        .content__song {
+            height: 9.6rem;
+
+            @include tablet {
+                height: 13.6rem;
+            }
+
+            @include desktop {
+                @include width-height(35vw, 100%);
+                @include flex-dir(column);
+                justify-content: center;
+            }
+        }
 
         .content__album {
             color: $primary-white;
 
             &--small {
-                font-weight: 400;
+                font-weight: 600;
+
+                @include tablet {
+                    margin-bottom: 1.6rem;
+                }
             }
         }
 
         .content__title {
             color: $primary-white;
 
-            @include tablet {
-                margin: 36px;
-            }
-
-            @include desktop {
-                margin: 96px;
-            }
-
             &--large {
-                font-size: 24px;
+                font-size: 2.4rem;
                 z-index: 2;
 
                 @include tablet {
-                    font-size: 60px;
+                    font-size: 6rem;
+                }
+
+                @include desktop {
+                    font-size: 5.8rem;
                 }
             }
         }
@@ -68,26 +115,82 @@
 
 // Schedule Section Styles
 .schedule {
-    padding: 16px;
+    padding: 1.6rem;
+
+    @include tablet {
+        padding-bottom: 3.6rem;
+    }
+
+    @include desktop {
+        @include flex-just(space-between);
+        padding: 3.6rem 9.6rem;
+
+    }
+
+    &__content {
+        @include desktop {
+            flex-grow: 1;
+            padding-top: 1.6rem;
+        }
+    }
 
     &__heading {
-        margin: 16px 0 8px 0;
+        margin: 1.6rem 0 .8rem 0;
+
+        @include tablet {
+            margin: 3.6rem 1.6rem;
+        }
+
+        @include desktop {
+            margin: 0 9.6rem 0 0;
+        }
+    }
+
+    &__header {
+        display: none;
+
+        @include tablet {
+            @include flex-just(space-between);
+            padding: 0 1.6rem;
+
+        }
+
+        .schedule__key--table {
+            color: $primary-silver;
+            @include font-size-weight(1.2rem, 600);
+            width: 15rem;
+        }
     }
 
     &__concerts {
-        display: flex;
-        flex-direction: column;
-        border-bottom: 1px solid $secondary-mercury;
+        @include flex-dir(column);
+        border-bottom: .1rem solid $secondary-mercury;
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1.6rem;
+        }
     }
 
     &__key {
-        margin: 12px 0 4px 0;
+        margin: 1.2rem 0 .4rem 0;
         color: $primary-silver;
-        font-size: 10px;
+        @include font-size-weight(1rem, 600);
+
+        @include tablet {
+            display: none;
+        }
     }
 
     &__value {
         color: $primary-black;
+
+        @include tablet {
+            text-align: left;
+            width: 15rem;
+        }
 
         &--bold {
             font-weight: 600;
@@ -95,15 +198,23 @@
     }
 
     &__buy-tickets {
-        margin: 16px 0;
-        padding: 14px 0;
-        font-weight: 600;
+        @include font-size-weight(1.5rem, 600);
+        margin: 1.6rem 0;
+        padding: 1.4rem 0;
         color: $primary-white;
         background-color: $primary-black;
         border: none;
-        border-radius: 4px;
-        height: 40px;
-        width: 100%;
+        border-radius: .4rem;
+        @include width-height(100%, 4rem);
+        cursor: pointer;
+
+        &:hover {
+            background-color: $secondary-dark-black;
+        }
+
+        @include tablet {
+            width: 15rem;
+        }
     }
 }
 

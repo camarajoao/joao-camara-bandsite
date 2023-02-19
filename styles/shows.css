@@ -20,63 +20,64 @@
   margin: 0;
   padding: 0;
   font-family: "AvenirNextLTPro";
+  font-size: 62.5%;
 }
 
 @media (min-width: 320px) {
   h1 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 2.4rem;
     font-weight: 600;
+    line-height: 3.2rem;
   }
 }
 @media (min-width: 768px) {
   h1 {
-    font-size: 60px;
-    line-height: 68px;
+    font-size: 6rem;
     font-weight: 600;
+    line-height: 6.8rem;
   }
 }
 
 @media (min-width: 320px) {
   h2 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 2.4rem;
     font-weight: 600;
+    line-height: 3.2rem;
   }
 }
 @media (min-width: 768px) {
   h2 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 3.6rem;
     font-weight: 600;
+    line-height: 4.4rem;
   }
 }
 
 @media (min-width: 320px) {
   h3 {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 1.4rem;
     font-weight: 600;
+    line-height: 2.2rem;
   }
 }
 @media (min-width: 768px) {
   h3 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 2.4rem;
     font-weight: 600;
+    line-height: 3.2rem;
   }
 }
 
 p {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 1.3rem;
   font-weight: 400;
+  line-height: 1.8rem;
 }
 @media (min-width: 768px) {
   p {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 1.4rem;
     font-weight: 400;
+    line-height: 2.2rem;
   }
 }
 
@@ -87,18 +88,20 @@ a {
 
 .bandsite-logo {
   background-color: #323232;
-  max-width: 120px;
-  max-height: 20px;
+  max-width: 12rem;
+  max-height: 2rem;
 }
 
 .form-input-style {
-  min-height: 36px;
+  font-size: 1.3rem;
+  min-height: 3.6rem;
   width: 100%;
-  border-radius: 4px;
-  padding: 12px;
+  border-radius: 0.4rem;
+  padding: 1.2rem;
   box-sizing: border-box;
-  margin-top: 4px;
-  border: 1px solid #E1E1E1;
+  margin-top: 0.4rem;
+  border: 0.1rem solid #E1E1E1;
+  background-color: #FAFAFA;
 }
 .form-input-style:focus::-moz-placeholder {
   color: transparent;
@@ -113,7 +116,30 @@ a {
   color: #323232;
 }
 .form-input-style:active {
-  border: 1px solid #323232;
+  border: 0.1rem solid #323232;
+}
+@media (min-width: 768px) {
+  .form-input-style {
+    min-height: 4.8rem;
+    padding: 1.6rem;
+  }
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 768px) {
+  iframe {
+    width: 60%;
+  }
+}
+@media (min-width: 1280px) {
+  iframe {
+    width: 100%;
+    height: 13.6rem;
+    margin-top: 3.6rem;
+  }
 }
 
 .header {
@@ -129,17 +155,17 @@ a {
   }
 }
 .header__logo {
-  margin: 16px;
-  height: 19px;
+  margin: 1.6rem;
+  height: 1.9rem;
 }
 @media (min-width: 768px) {
   .header__logo {
-    margin: 24px 32px;
+    margin: 2.4rem 3.2rem;
   }
 }
 @media (min-width: 1280px) {
   .header__logo {
-    margin-left: 96px;
+    margin-left: 9.6rem;
   }
 }
 .header__nav {
@@ -152,48 +178,50 @@ a {
 }
 @media (min-width: 768px) {
   .header__list {
-    width: 200px;
+    width: 20rem;
   }
 }
 .header__link {
-  font-size: 14px;
+  font-size: 2rem;
   color: #E1E1E1;
   list-style-type: none;
   width: 50%;
   text-align: center;
-  padding-bottom: 10px;
-  border-bottom: 4px solid #323232;
+  padding-bottom: 1rem;
+  border-bottom: 0.4rem solid #323232;
 }
 @media (min-width: 768px) {
   .header__link {
-    padding: 24px 0;
+    width: auto;
+    padding: 2.4rem 0;
     border-bottom: none;
+    margin: 0 2.4rem;
   }
 }
 .header__link--active {
   color: #FFF;
   font-weight: 600;
-  border-bottom: 4px solid #FFF;
+  border-bottom: 0.4rem solid #FFF;
 }
 .header__link:hover {
-  border-bottom: 4px solid #FFF;
+  border-bottom: 0.4rem solid #FFF;
   color: #FFF;
 }
 
 .footer {
   color: #FFF;
   background-color: #323232;
-  padding: 24px 16px 16px 16px;
+  padding: 2.4rem 1.6rem 1.6rem 1.6rem;
 }
 @media (min-width: 768px) {
   .footer {
-    padding: 48px 36px 36px 36px;
+    padding: 4.8rem 3.6rem 3.6rem 3.6rem;
     position: relative;
   }
 }
 @media (min-width: 1280px) {
   .footer {
-    padding: 48px 96px 36px 96px;
+    padding: 4.8rem 9.6rem 3.6rem 9.6rem;
   }
 }
 @media (min-width: 768px) {
@@ -210,8 +238,8 @@ a {
   }
 }
 .footer__contact .social {
-  width: 120px;
-  padding: 16px 0 24px 0;
+  width: 12rem;
+  padding: 1.6rem 0 2.4rem 0;
   display: flex;
   justify-content: space-between;
 }
@@ -221,7 +249,7 @@ a {
 }
 @media (min-width: 768px) {
   .footer__management {
-    padding: 36px 0 0 0;
+    padding: 3.6rem 0 0 0;
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
@@ -235,13 +263,13 @@ a {
 .footer__management .management__line,
 .footer__management .agent__line,
 .footer__management .entertainment__line {
-  padding-bottom: 16px;
+  padding-bottom: 1.6rem;
 }
 @media (min-width: 768px) {
   .footer__management .management__line,
   .footer__management .agent__line,
   .footer__management .entertainment__line {
-    padding-bottom: 24px;
+    padding-bottom: 2.4rem;
   }
 }
 .footer__management .management__line--bold,
@@ -249,8 +277,20 @@ a {
 .footer__management .entertainment__line--bold {
   font-weight: 600;
 }
+.footer__management .management__line--email,
+.footer__management .agent__line--email,
+.footer__management .entertainment__line--email {
+  font-size: 1.3rem;
+}
+@media (min-width: 768px) {
+  .footer__management .management__line--email,
+  .footer__management .agent__line--email,
+  .footer__management .entertainment__line--email {
+    font-size: 1.4rem;
+  }
+}
 .footer__logo {
-  margin-top: 48px;
+  margin-top: 4.8rem;
 }
 @media (min-width: 768px) {
   .footer__logo {
@@ -260,13 +300,13 @@ a {
   }
 }
 .footer__copyright--font {
-  font-size: 10px;
-  padding-top: 8px;
+  font-size: 1rem;
+  padding-top: 0.8rem;
 }
 @media (min-width: 768px) {
   .footer__copyright--font {
-    font-size: 13px;
-    padding-top: 24px;
+    font-size: 1.3rem;
+    padding-top: 2.4rem;
   }
 }
 
@@ -275,89 +315,222 @@ a {
   display: flex;
   align-items: center;
   overflow: hidden;
-  max-height: 90vh;
+  max-height: 38vh;
+}
+@media (min-width: 768px) {
+  .hero-shows {
+    max-height: 64vh;
+  }
+}
+@media (min-width: 1280px) {
+  .hero-shows {
+    max-height: 88vh;
+  }
 }
 .hero-shows__img {
   width: 100%;
 }
 .hero-shows__opaque {
   background-color: #323232;
-  height: 100%;
   width: 100%;
+  height: 100%;
   opacity: 50%;
   position: absolute;
 }
 .hero-shows__content {
   display: flex;
-  position: absolute;
   flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  padding: 16px;
+  padding: 3.6rem 1.6rem;
+}
+@media (min-width: 768px) {
+  .hero-shows__content {
+    padding: 6.4rem 3.6rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero-shows__content {
+    padding: 12rem;
+    flex-direction: row;
+    vertical-align: middle;
+  }
+}
+.hero-shows__content .content__song-name {
+  display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
+  padding-right: 8rem;
+  flex-grow: 1;
+}
+@media (min-width: 768px) {
+  .hero-shows__content .content__song-name {
+    padding-right: 9.6rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero-shows__content .content__song-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 35vw;
+  }
+}
+.hero-shows__content .content__song {
+  height: 9.6rem;
+}
+@media (min-width: 768px) {
+  .hero-shows__content .content__song {
+    height: 13.6rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero-shows__content .content__song {
+    width: 35vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .hero-shows__content .content__album {
   color: #FFF;
 }
 .hero-shows__content .content__album--small {
-  font-weight: 400;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .hero-shows__content .content__album--small {
+    margin-bottom: 1.6rem;
+  }
 }
 .hero-shows__content .content__title {
   color: #FFF;
 }
-@media (min-width: 768px) {
-  .hero-shows__content .content__title {
-    margin: 36px;
-  }
-}
-@media (min-width: 1280px) {
-  .hero-shows__content .content__title {
-    margin: 96px;
-  }
-}
 .hero-shows__content .content__title--large {
-  font-size: 24px;
+  font-size: 2.4rem;
   z-index: 2;
 }
 @media (min-width: 768px) {
   .hero-shows__content .content__title--large {
-    font-size: 60px;
+    font-size: 6rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero-shows__content .content__title--large {
+    font-size: 5.8rem;
   }
 }
 
 .schedule {
-  padding: 16px;
+  padding: 1.6rem;
+}
+@media (min-width: 768px) {
+  .schedule {
+    padding-bottom: 3.6rem;
+  }
+}
+@media (min-width: 1280px) {
+  .schedule {
+    display: flex;
+    justify-content: space-between;
+    padding: 3.6rem 9.6rem;
+  }
+}
+@media (min-width: 1280px) {
+  .schedule__content {
+    flex-grow: 1;
+    padding-top: 1.6rem;
+  }
 }
 .schedule__heading {
-  margin: 16px 0 8px 0;
+  margin: 1.6rem 0 0.8rem 0;
+}
+@media (min-width: 768px) {
+  .schedule__heading {
+    margin: 3.6rem 1.6rem;
+  }
+}
+@media (min-width: 1280px) {
+  .schedule__heading {
+    margin: 0 9.6rem 0 0;
+  }
+}
+.schedule__header {
+  display: none;
+}
+@media (min-width: 768px) {
+  .schedule__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.6rem;
+  }
+}
+.schedule__header .schedule__key--table {
+  color: #AFAFAF;
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 15rem;
 }
 .schedule__concerts {
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #E1E1E1;
+  border-bottom: 0.1rem solid #E1E1E1;
+}
+@media (min-width: 768px) {
+  .schedule__concerts {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.6rem;
+  }
 }
 .schedule__key {
-  margin: 12px 0 4px 0;
+  margin: 1.2rem 0 0.4rem 0;
   color: #AFAFAF;
-  font-size: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .schedule__key {
+    display: none;
+  }
 }
 .schedule__value {
   color: #323232;
+}
+@media (min-width: 768px) {
+  .schedule__value {
+    text-align: left;
+    width: 15rem;
+  }
 }
 .schedule__value--bold {
   font-weight: 600;
 }
 .schedule__buy-tickets {
-  margin: 16px 0;
-  padding: 14px 0;
+  font-size: 1.5rem;
   font-weight: 600;
+  margin: 1.6rem 0;
+  padding: 1.4rem 0;
   color: #FFF;
   background-color: #323232;
   border: none;
-  border-radius: 4px;
-  height: 40px;
+  border-radius: 0.4rem;
   width: 100%;
+  height: 4rem;
+  cursor: pointer;
+}
+.schedule__buy-tickets:hover {
+  background-color: #000000;
+}
+@media (min-width: 768px) {
+  .schedule__buy-tickets {
+    width: 15rem;
+  }
 }
 
 .schedule__concerts--hover {
