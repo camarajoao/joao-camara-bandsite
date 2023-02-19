@@ -19,7 +19,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "AvenirNextLTPro";
+  font-family: "AvenirNextLTPro", sans-serif;
   font-size: 62.5%;
 }
 
@@ -142,6 +142,17 @@ iframe {
   }
 }
 
+.error-state {
+  background-color: #FFF !important;
+  border: 0.1rem solid #D22D2D !important;
+}
+.error-state::-moz-placeholder {
+  color: transparent !important;
+}
+.error-state::placeholder {
+  color: transparent !important;
+}
+
 .header {
   background-color: #323232;
   display: flex;
@@ -150,8 +161,9 @@ iframe {
 }
 @media (min-width: 768px) {
   .header {
-    flex-direction: row;
+    display: flex;
     justify-content: flex-start;
+    flex-direction: row;
   }
 }
 .header__logo {
@@ -251,8 +263,9 @@ iframe {
   .footer__management {
     padding: 3.6rem 0 0 0;
     width: 100%;
-    flex-direction: row;
+    display: flex;
     justify-content: space-between;
+    flex-direction: row;
   }
 }
 @media (min-width: 1280px) {
@@ -331,20 +344,20 @@ iframe {
   width: 100%;
 }
 .hero-shows__opaque {
-  background-color: #323232;
   width: 100%;
   height: 100%;
+  background-color: #323232;
   opacity: 50%;
   position: absolute;
 }
 .hero-shows__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: absolute;
-  box-sizing: border-box;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: absolute;
+  box-sizing: border-box;
   padding: 3.6rem 1.6rem;
 }
 @media (min-width: 768px) {
@@ -361,8 +374,8 @@ iframe {
 }
 .hero-shows__content .content__song-name {
   display: flex;
-  flex-direction: column;
   justify-content: space-evenly;
+  flex-direction: column;
   padding-right: 8rem;
   flex-grow: 1;
 }
@@ -374,8 +387,8 @@ iframe {
 @media (min-width: 1280px) {
   .hero-shows__content .content__song-name {
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
     width: 35vw;
   }
 }
@@ -392,8 +405,8 @@ iframe {
     width: 35vw;
     height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
   }
 }
 .hero-shows__content .content__album {
@@ -470,9 +483,9 @@ iframe {
   }
 }
 .schedule__header .schedule__key--table {
-  color: #AFAFAF;
   font-size: 1.2rem;
   font-weight: 600;
+  color: #AFAFAF;
   width: 15rem;
 }
 .schedule__concerts {
@@ -482,17 +495,18 @@ iframe {
 }
 @media (min-width: 768px) {
   .schedule__concerts {
-    flex-direction: row;
+    display: flex;
     justify-content: space-between;
+    flex-direction: row;
     align-items: center;
     padding: 0 1.6rem;
   }
 }
 .schedule__key {
-  margin: 1.2rem 0 0.4rem 0;
-  color: #AFAFAF;
   font-size: 1rem;
   font-weight: 600;
+  margin: 1.2rem 0 0.4rem 0;
+  color: #AFAFAF;
 }
 @media (min-width: 768px) {
   .schedule__key {
@@ -512,6 +526,8 @@ iframe {
   font-weight: 600;
 }
 .schedule__buy-tickets {
+  width: 100%;
+  height: 4rem;
   font-size: 1.5rem;
   font-weight: 600;
   margin: 1.6rem 0;
@@ -520,8 +536,6 @@ iframe {
   background-color: #323232;
   border: none;
   border-radius: 0.4rem;
-  width: 100%;
-  height: 4rem;
   cursor: pointer;
 }
 .schedule__buy-tickets:hover {

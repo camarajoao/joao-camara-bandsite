@@ -25,18 +25,17 @@
     }
 
     &__opaque {
-        background-color: $primary-black;
         @include width-height(100%, 100%);
+        background-color: $primary-black;
         opacity: 50%;
         position: absolute;
     }
 
     &__content {
-        @include flex-dir(column);
-        justify-content: space-between;
+        @include width-height(100%, 100%);
+        @include flex(space-between, column);
         position: absolute;
         box-sizing: border-box;
-        @include width-height(100%, 100%);
         padding: 3.6rem 1.6rem;
 
         @include tablet {
@@ -50,8 +49,7 @@
         }
 
         .content__song-name {
-            @include flex-dir(column);
-            justify-content: space-evenly;
+            @include flex(space-evenly, column);
             padding-right: 8rem;
             flex-grow: 1;
 
@@ -60,8 +58,7 @@
             }
 
             @include desktop {
-                @include flex-dir(column);
-                justify-content: center;
+                @include flex(center, column);
                 width: 35vw;
             }
         }
@@ -75,8 +72,7 @@
 
             @include desktop {
                 @include width-height(35vw, 100%);
-                @include flex-dir(column);
-                justify-content: center;
+                @include flex(center, column);
             }
         }
 
@@ -122,7 +118,7 @@
     }
 
     @include desktop {
-        @include flex-just(space-between);
+        @include flex(space-between, null);
         padding: 3.6rem 9.6rem;
 
     }
@@ -150,34 +146,33 @@
         display: none;
 
         @include tablet {
-            @include flex-just(space-between);
+            @include flex(space-between, null);
             padding: 0 1.6rem;
 
         }
 
         .schedule__key--table {
-            color: $primary-silver;
             @include font-size-weight(1.2rem, 600);
+            color: $primary-silver;
             width: 15rem;
         }
     }
 
     &__concerts {
-        @include flex-dir(column);
+        @include flex(null, column);
         border-bottom: .1rem solid $secondary-mercury;
 
         @include tablet {
-            flex-direction: row;
-            justify-content: space-between;
+            @include flex(space-between, row);
             align-items: center;
             padding: 0 1.6rem;
         }
     }
 
     &__key {
+        @include font-size-weight(1rem, 600);
         margin: 1.2rem 0 .4rem 0;
         color: $primary-silver;
-        @include font-size-weight(1rem, 600);
 
         @include tablet {
             display: none;
@@ -198,6 +193,7 @@
     }
 
     &__buy-tickets {
+        @include width-height(100%, 4rem);
         @include font-size-weight(1.5rem, 600);
         margin: 1.6rem 0;
         padding: 1.4rem 0;
@@ -205,7 +201,6 @@
         background-color: $primary-black;
         border: none;
         border-radius: .4rem;
-        @include width-height(100%, 4rem);
         cursor: pointer;
 
         &:hover {
