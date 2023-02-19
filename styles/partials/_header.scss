@@ -3,12 +3,11 @@
 // Header Styles
 .header {
     background-color: $primary-black;
-    @include flex-dir(column);
+    @include flex(null, column);
     align-items: center;
 
     @include tablet {
-        flex-direction: row;
-        justify-content: flex-start;
+        @include flex(flex-start, row);
     }
 
     &__logo {
@@ -29,7 +28,7 @@
     }
 
     &__list {
-        @include flex-dir(row);
+        @include flex(null, row);
         box-sizing: border-box;
 
         @include tablet {
