@@ -1,3 +1,6 @@
+const APIKey = "?api_key=5d3a2fbf-085f-47a2-b58b-9d9c6aff06fa";
+const APIShows = `https://project-1-api.herokuapp.com/showdates${APIKey}`;
+
 const shows = [
     {
         date: "Mon Sept 06 2021",
@@ -56,7 +59,25 @@ const tableHeaderTable = document.createElement('div');
 tableHeaderTable.classList.add('schedule__header');
 scheduleContent.appendChild(tableHeaderTable);
 
-for (let show of shows) {
+
+function getShows() {
+    axios.get(APIShows)
+        .then((response) => {
+            const shows = response.data;
+
+            for (let show of shows) {
+                displayShow(show);
+            }
+            console.log(response.data);
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+};
+getShows();
+
+
+function displayShow(show) {
     const concert = document.createElement("div");
     concert.classList.add('schedule__concerts');
 
@@ -67,7 +88,8 @@ for (let show of shows) {
 
     const valueDate = document.createElement("p");
     valueDate.classList.add('schedule__value', 'schedule__value--bold');
-    valueDate.innerText = `${show.date}`;
+    const date = new Date(show.date);
+    valueDate.innerText = `${date.toDateString()}`;
     concert.appendChild(valueDate);
 
     const keyVenue = document.createElement("p");
@@ -77,7 +99,7 @@ for (let show of shows) {
 
     const valueVenue = document.createElement("p");
     valueVenue.classList.add('schedule__value');
-    valueVenue.innerText = `${show.venue}`;
+    valueVenue.innerText = `${show.place}`;
     concert.appendChild(valueVenue);
 
     const keyLocation = document.createElement("p");
