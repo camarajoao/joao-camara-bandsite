@@ -1,22 +1,5 @@
-const comments = [
-    {
-        name: "Connor Walton",
-        timestamp: "02/17/2021",
-        comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains."
-    },
-
-    {
-        name: "Emilie Beach",
-        timestamp: "01/09/2021",
-        comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day."
-    },
-
-    {
-        name: "Miles Acosta",
-        timestamp: "12/20/2020",
-        comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
-    }
-];
+const APIKey = "?api_key=5d3a2fbf-085f-47a2-b58b-9d9c6aff06fa";
+const APIComments = `https://project-1-api.herokuapp.com/comments${APIKey}`;
 
 const conversationSection = document.querySelector('.conversation');
 const conversationContainer = document.createElement('div');
@@ -80,8 +63,9 @@ formContainer.appendChild(formContainerRight);
 conversationContainer.appendChild(formContainer);
 
 // End of Create a comment Section
-// Posted comments Section
 
+
+// Posted comments Section
 const postedSection = document.createElement('div');
 postedSection.classList.add('conversation__posted');
 conversationContainer.appendChild(postedSection)
@@ -108,7 +92,12 @@ function displayComment(comment) {
 
     const postedCommentDate = document.createElement('p');
     postedCommentDate.classList.add('conversation__posted-date');
-    postedCommentDate.innerText = `${comment.timestamp}`;
+    const date = new Date(comment.timestamp);
+    const day = ("0" + date.getDate()).slice(-2);
+    const month = ("0" + (date.getMonth() + 1)).slice(-2);
+    const year = date.getFullYear();
+    timestamp = `${month}/${day}/${year}`
+    postedCommentDate.innerText = timestamp;
 
     const postedCommentContainerRightBottom = document.createElement('div');
     postedCommentContainerRightBottom.classList.add('conversation__posted-container-right-bottom');
@@ -125,26 +114,35 @@ function displayComment(comment) {
     postedSection.append(postedCommentContainer);
 }
 
-for (let comment of comments) {
-    displayComment(comment);
-}
+// Function to fetch comments from API and display on the page
+function getComments() {
+    axios.get(APIComments)
+        .then((response) => {
+            const comments = response.data;
+            comments.sort((a, b) => b.timestamp - a.timestamp);
+            for (let comment of comments) {
+                displayComment(comment);
+            }
+            console.log(response.data);
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+};
+getComments();
 
-
+// Button to post comment
 formButton.addEventListener('click', function (event) {
     event.preventDefault();
 
     if (formNameInput.value !== "" && formCommentInput.value !== "") {
-        const date = new Date();
-        const day = ("0" + date.getDate()).slice(-2);
-        const month = ("0" + (date.getMonth() + 1)).slice(-2);
-        const year = date.getFullYear();
-        timestamp = `${month}/${day}/${year}`
-        const newComment = { name: formNameInput.value, timestamp, comment: formCommentInput.value }
-        comments.unshift(newComment);
-        postedSection.innerHTML = "";
-        for (let comment of comments) {
-            displayComment(comment);
-        }
+        const newComment = { name: formNameInput.value, comment: formCommentInput.value }
+        axios.post(APIComments, newComment)
+            .then((response) => {
+                postedSection.innerHTML = "";
+                getComments();
+            })
+
         formNameInput.value = "";
         formCommentInput.value = "";
     } else {
