@@ -142,6 +142,9 @@ formButton.addEventListener('click', function (event) {
                 postedSection.innerHTML = "";
                 getComments();
             })
+            .catch((err) => {
+                console.log(err);
+            })
 
         formNameInput.value = "";
         formCommentInput.value = "";
