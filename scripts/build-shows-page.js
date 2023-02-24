@@ -1,44 +1,6 @@
 const APIKey = "?api_key=5d3a2fbf-085f-47a2-b58b-9d9c6aff06fa";
 const APIShows = `https://project-1-api.herokuapp.com/showdates${APIKey}`;
 
-const shows = [
-    {
-        date: "Mon Sept 06 2021",
-        venue: "Ronald Lane",
-        location: "San Francisco, CA",
-    },
-
-    {
-        date: "Tue Sept 21 2021",
-        venue: "Pier 3 East",
-        location: "San Francisco, CA",
-    },
-
-    {
-        date: "Fri Oct 15 2021",
-        venue: "View Lounge",
-        location: "San Francisco, CA",
-    },
-
-    {
-        date: "Sat Nov 06 2021",
-        venue: "Hyatt Agency",
-        location: "San Francisco, CA",
-    },
-
-    {
-        date: "Fri Nov 26 2021",
-        venue: "Moscow Center",
-        location: "San Francisco, CA",
-    },
-
-    {
-        date: "Wed Dec 15 2021",
-        venue: "Press Club",
-        location: "San Francisco, CA",
-    }
-];
-
 const schedule = document.querySelector(".schedule");
 // create elements for schedule title
 const scheduleTitle = document.createElement('div');
