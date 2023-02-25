@@ -358,11 +358,11 @@ iframe {
   flex-direction: column;
   position: absolute;
   box-sizing: border-box;
-  padding: 3.6rem 1.6rem;
+  padding: 1.6rem;
 }
 @media (min-width: 768px) {
   .hero-shows__content {
-    padding: 6.4rem 3.6rem;
+    padding: 3.6rem;
   }
 }
 @media (min-width: 1280px) {
@@ -394,10 +394,12 @@ iframe {
 }
 .hero-shows__content .content__song {
   height: 9.6rem;
+  margin: 1rem 0;
 }
 @media (min-width: 768px) {
   .hero-shows__content .content__song {
     height: 13.6rem;
+    margin: 2rem 0;
   }
 }
 @media (min-width: 1280px) {
@@ -411,6 +413,7 @@ iframe {
 }
 .hero-shows__content .content__album {
   color: #FFF;
+  margin: 1rem 0;
 }
 .hero-shows__content .content__album--small {
   font-weight: 600;
@@ -422,6 +425,17 @@ iframe {
 }
 .hero-shows__content .content__title {
   color: #FFF;
+  width: 21rem;
+}
+@media (min-width: 768px) {
+  .hero-shows__content .content__title {
+    width: 51rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero-shows__content .content__title {
+    width: 45rem;
+  }
 }
 .hero-shows__content .content__title--large {
   font-size: 2.4rem;

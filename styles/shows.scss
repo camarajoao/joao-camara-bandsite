@@ -36,10 +36,10 @@
         @include flex(space-between, column);
         position: absolute;
         box-sizing: border-box;
-        padding: 3.6rem 1.6rem;
+        padding: 1.6rem;
 
         @include tablet {
-            padding: 6.4rem 3.6rem;
+            padding: 3.6rem;
         }
 
         @include desktop {
@@ -65,9 +65,11 @@
 
         .content__song {
             height: 9.6rem;
+            margin: 1rem 0;
 
             @include tablet {
                 height: 13.6rem;
+                margin: 2rem 0;
             }
 
             @include desktop {
@@ -78,6 +80,7 @@
 
         .content__album {
             color: $primary-white;
+            margin: 1rem 0;
 
             &--small {
                 font-weight: 600;
@@ -90,6 +93,15 @@
 
         .content__title {
             color: $primary-white;
+            width: 21rem;
+
+            @include tablet {
+                width: 51rem;
+            }
+
+            @include desktop {
+                width: 45rem;
+            }
 
             &--large {
                 font-size: 2.4rem;
