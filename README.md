@@ -5,7 +5,8 @@ Bandsite is a project designed for an up-and-coming band. The project is split i
 
 ## Screenshots
 
-![InStock Home Page](/camarajoao/InStock/blob/main/InStock-media/home_page-desktop.png)
+<img src="/Screenshots/show_page-desktop.png" width="400"/>
+<img src="/Screenshots/comments_form-tablet.png" width="400"/>
 
 
 ## Features
